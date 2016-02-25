@@ -98,6 +98,7 @@ for idx, movie in data.iterrows():
                     'descr': movie["description_en"],
                     'labels': ','.join(a_labels)
                 })
+        print idx, " ", a_labels
 
     if len(f_labels) > 0:
         d_f.append({

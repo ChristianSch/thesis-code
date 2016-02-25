@@ -5,7 +5,6 @@ import nltk.data
 import logging
 from gensim.models import word2vec
 
-
 # punkt tokenizer to split sentences
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
@@ -53,6 +52,7 @@ num_workers = 2       # Number of threads to run in parallel
 context = 10          # Context window size
 downsampling = 1e-3   # Downsample setting for frequent words
 
+return
 model = word2vec.Word2Vec(descs, workers=num_workers, \
             size=num_features, min_count = min_word_count, \
             window = context, sample = downsampling)
